@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Real Prayer Movement Inc. | Daily Prayer Meetings | RPM & Company of Prophets</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Join The Real Prayer Movement Inc. (RPM) and Company of Prophets for daily Zoom prayer meetings at 5:00pm PT / 8:00pm ET. Global 501(c)(3) ministry focused on healing hearts and training leaders.">
+    <meta name="keywords" content="prayer movement, daily prayer, zoom prayer meetings, Christian ministry, spiritual healing, prophetic ministry, global prayer, 501c3 nonprofit">
+    <meta name="author" content="The Real Prayer Movement Inc.">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-primary: #000000;
+            --bg-secondary: #0a0a0a;
+            --bg-tertiary: #111111;
+            --text-primary: #ffffff;
+            --text-secondary: #a1a1aa;
+            --text-tertiary: #71717a;
+            --accent: #007aff;
+            --accent-hover: #0056cc;
+            --border: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(255, 255, 255, 0.16);
+            --glass: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            --shadow-heavy: 0 16px 48px rgba(0, 0, 0, 0.4);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.5;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(20px) saturate(180%);
+            border-bottom: 1px solid var(--border);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-align: center;
+            line-height: 1.3;
+            letter-spacing: -0.01em;
+        }
+
+        .logo-subtitle {
+            font-size: 13px;
+            font-weight: 400;
+            color: var(--text-secondary);
+            margin-top: 2px;
+        }
+
+        /* Main Content */
+        main {
+            margin-top: 60px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: clamp(32px, 5vw, 56px);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #ffffff 0%, #a1a1aa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            font-weight: 400;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.4s forwards;
+        }
+
+        .hero-scripture {
+            font-size: 16px;
+            color: var(--text-tertiary);
+            font-style: italic;
+            max-width: 500px;
+            margin: 0 auto 48px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.6s forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Meeting Card */
+        .meeting-card {
+            background: var(--glass);
+            backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 48px 40px;
+            margin: 40px 0;
+            box-shadow: var(--shadow);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.8s forwards;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .meeting-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-heavy);
+            border-color: var(--border-hover);
+        }
+
+        .meeting-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .meeting-time {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+        }
+
+        .meeting-frequency {
+            font-size: 16px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--accent);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            margin: 24px auto;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
+            cursor: pointer;
+            min-width: 240px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .cta-button:hover {
+            background: var(--accent-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 8px 25px rgba(0, 122, 255, 0.3);
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:active {
+            transform: translateY(0);
+        }
+
+        .meeting-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .detail-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .detail-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--border-hover);
+            transform: translateY(-1px);
+        }
+
+        .detail-title {
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .detail-content {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .meeting-id {
+            font-family: 'SF Mono', 'Monaco', 'Cascadia Code', monospace;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .zoom-link, .phone-link {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .zoom-link:hover, .phone-link:hover {
+            color: var(--accent-hover);
+        }
+
+        .testimonies-section {
+            text-align: center;
+            margin-top: 32px;
+            padding: 20px;
+            background: rgba(0, 122, 255, 0.05);
+            border: 1px solid rgba(0, 122, 255, 0.1);
+            border-radius: 12px;
+        }
+
+        .testimonies-title {
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 4px;
+        }
+
+        .testimonies-text {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        /* About Section */
+        .about {
+            padding: 60px 0;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 1s forwards;
+        }
+
+        .about-title {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ffffff 0%, #a1a1aa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .about-text {
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 32px;
+        }
+
+        .nonprofit-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 0.01em;
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 0 40px;
+            text-align: center;
+            color: var(--text-tertiary);
+            border-top: 1px solid var(--border);
+            margin-top: 80px;
+        }
+
+        .footer-blessing {
+            font-style: italic;
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+
+            .meeting-card {
+                padding: 32px 24px;
+                margin: 24px 0;
+            }
+
+            .meeting-details {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .detail-card {
+                padding: 20px;
+            }
+
+            .hero {
+                padding: 60px 0 40px;
+            }
+
+            .about {
+                padding: 40px 0;
+            }
+
+            .about-title {
+                font-size: 28px;
+            }
+
+            .meeting-time {
+                font-size: 24px;
+            }
+
+            .cta-button {
+                min-width: 200px;
+                padding: 14px 24px;
+            }
+        }
+
+        /* Reduce motion for accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--text-tertiary);
+            border-radius: 3px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--text-secondary);
+        }
+
+        /* Selection styling */
+        ::selection {
+            background: rgba(0, 122, 255, 0.3);
+            color: var(--text-primary);
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="header-content">
+            <div class="logo">
+                The Real Prayer Movement Inc.
+                <div class="logo-subtitle">& Company of Prophets</div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">Join Us in Prayer</h1>
+                <p class="hero-subtitle">Global Ministry • Daily Meetings • Healing Hearts</p>
+                <p class="hero-scripture">
+                    "First of all, then, I urge that supplications, prayers, intercessions, and thanksgivings be made for all people" — 1 Timothy 2:1
+                </p>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="meeting-card">
+                <div class="meeting-header">
+                    <div class="meeting-time">5:00 PM PT • 8:00 PM ET</div>
+                    <div class="meeting-frequency">Every Day • 7 Days a Week</div>
+                </div>
+
+                <div style="text-align: center;">
+                    <a href="https://us04web.zoom.us/j/79534717147?pwd=MnpJMW1hWWtXd29zOWdpdTdPZ0QyUT09" 
+                       class="cta-button" target="_blank" rel="noopener noreferrer">
+                        🙏 Join Prayer Meeting
+                    </a>
+                </div>
+
+                <div class="meeting-details">
+                    <div class="detail-card">
+                        <div class="detail-title">💻 Computer & Mobile</div>
+                        <div class="detail-content">
+                            <strong>Zoom Link:</strong><br>
+                            <a href="https://us04web.zoom.us/j/79534717147?pwd=MnpJMW1hWWtXd29zOWdpdTdPZ0QyUT09" 
+                               target="_blank" rel="noopener noreferrer" 
+                               class="zoom-link">
+                               Join via Zoom
+                            </a><br><br>
+                            <strong>Meeting ID:</strong> <span class="meeting-id">795 3471 7147</span><br>
+                            <strong>Password:</strong> <span class="meeting-id">9rDMde</span><br><br>
+                            <em>Camera optional but welcomed</em>
+                        </div>
+                    </div>
+
+                    <div class="detail-card">
+                        <div class="detail-title">📞 Phone Access</div>
+                        <div class="detail-content">
+                            <strong>Dial:</strong> <span class="meeting-id">1-669-900-6833</span><br>
+                            <strong>Meeting ID:</strong> <span class="meeting-id">795 3471 7147</span><br>
+                            <strong>Phone Password:</strong> <span class="meeting-id">494353</span><br><br>
+                            <strong>Quick Dial:</strong><br>
+                            <a href="tel:16699006833,,79534717147#,,,,,,0#,,494353#" 
+                               class="phone-link">
+                               Tap to Call & Join
+                            </a><br><br>
+                            <em>No internet required</em>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonies-section">
+                    <div class="testimonies-title">✨ Testimonies Welcome</div>
+                    <div class="testimonies-text">Brief time at the end for sharing</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+            <div class="container">
+                <h2 class="about-title">Our Mission</h2>
+                <p class="about-text">
+                    We are a global ministry dedicated to healing and restoring hearts while influencing and training leaders to foster an intimate and obedient relationship with the Creator. Through daily prayer meetings, we build a community of faith that spans the globe.
+                </p>
+                <div class="nonprofit-badge">501(c)(3) Nonprofit Ministry</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="footer-blessing">"God bless you!"</p>
+            <p>&copy; 2024 The Real Prayer Movement Inc. & Company of Prophets</p>
+        </div>
+    </footer>
+
+    <script>
+        // Enhanced header scroll effect
+        const header = document.getElementById('header');
+        let lastScrollY = window.scrollY;
+
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+            
+            if (currentScrollY > 50) {
+                header.style.background = 'rgba(0, 0, 0, 0.95)';
+                header.style.borderBottomColor = 'rgba(255, 255, 255, 0.12)';
+            } else {
+                header.style.background = 'rgba(0, 0, 0, 0.8)';
+                header.style.borderBottomColor = 'rgba(255, 255, 255, 0.08)';
+            }
+            
+            lastScrollY = currentScrollY;
+        });
+
+        // Enhanced button interactions
+        document.addEventListener('DOMContentLoaded', () => {
+            const ctaButton = document.querySelector('.cta-button');
+            
+            if (ctaButton) {
+                ctaButton.addEventListener('click', () => {
+                    // Subtle haptic-like feedback
+                    ctaButton.style.transform = 'translateY(1px)';
+                    setTimeout(() => {
+                        ctaButton.style.transform = '';
+                    }, 100);
+                    
+                    console.log('Prayer meeting link clicked');
+                });
+            }
+
+            // Smooth reveal animation on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Add subtle parallax effect to hero
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const hero = document.querySelector('.hero');
+                if (hero && scrolled < window.innerHeight) {
+                    hero.style.transform = `translateY(${scrolled * 0.1}px)`;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
