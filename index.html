@@ -304,6 +304,22 @@
             font-weight: 600;
             color: var(--accent);
             margin-bottom: 4px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .icon {
+            width: 18px;
+            height: 18px;
+            stroke-width: 2;
+            flex-shrink: 0;
+        }
+
+        .cta-button .icon {
+            width: 20px;
+            height: 20px;
+            stroke-width: 2.2;
         }
 
         .testimonies-text {
@@ -349,6 +365,192 @@
             font-weight: 500;
             font-size: 14px;
             letter-spacing: 0.01em;
+        }
+
+        .donate {
+            padding: 40px 0 20px;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 1.1s forwards;
+        }
+
+        .donate-title {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ffffff 0%, #a1a1aa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .donate-text {
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 32px;
+        }
+
+        .donate-card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 28px 24px 24px;
+            max-width: 380px;
+            margin: 0 auto;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            text-align: center;
+        }
+
+        .donate-brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            font-weight: 800;
+            color: #6d28d9;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            padding: 6px 12px;
+            background: #f4f3ff;
+            border-radius: 999px;
+            margin-bottom: 18px;
+        }
+
+        .donate-brand-mark {
+            font-size: 14px;
+            font-weight: 900;
+            letter-spacing: 0;
+            color: #6d28d9;
+        }
+
+        .donate-qr-wrap {
+            display: inline-block;
+            padding: 10px;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+        }
+
+        .donate-qr {
+            display: block;
+            width: 220px;
+            height: 220px;
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .donate-instructions {
+            margin: 14px 0 18px;
+            font-size: 13px;
+            line-height: 1.5;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        .donate-email-row {
+            text-align: left;
+            margin-bottom: 12px;
+        }
+
+        .donate-email-label {
+            display: block;
+            font-size: 11px;
+            font-weight: 700;
+            color: #6b21a8;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .donate-email-btn {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 12px 14px;
+            background: #f4f3ff;
+            border: 1px solid #ddd6fe;
+            border-radius: 12px;
+            cursor: pointer;
+            font-family: inherit;
+            transition: background 0.15s ease, border-color 0.15s ease;
+        }
+
+        .donate-email-btn:hover,
+        .donate-email-btn:focus {
+            background: #ede9fe;
+            border-color: #c4b5fd;
+            outline: none;
+        }
+
+        .donate-email-btn.copied {
+            background: #ecfdf5;
+            border-color: #a7f3d0;
+        }
+
+        .donate-email-value {
+            font-size: 14px;
+            color: #1a1a1a;
+            font-weight: 600;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            flex: 1;
+            text-align: left;
+        }
+
+        .donate-email-copy {
+            font-size: 11px;
+            font-weight: 700;
+            color: #6b21a8;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            flex-shrink: 0;
+        }
+
+        .donate-email-btn.copied .donate-email-copy {
+            color: #047857;
+        }
+
+        .donate-zelle-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 14px 16px;
+            background: #6d28d9;
+            color: #ffffff;
+            text-align: center;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: 12px;
+            transition: background 0.15s ease, transform 0.15s ease;
+        }
+
+        .donate-zelle-btn .icon {
+            width: 16px;
+            height: 16px;
+            stroke-width: 2.2;
+        }
+
+        .donate-zelle-btn:hover,
+        .donate-zelle-btn:focus {
+            background: #5b21b6;
+            transform: translateY(-1px);
+        }
+
+        .donate-fallback {
+            margin: 14px 0 0;
+            font-size: 12px;
+            line-height: 1.5;
+            color: #6b7280;
+            font-weight: 500;
         }
 
         /* Footer */
@@ -474,12 +676,13 @@
                 <div style="text-align: center;">
                     <a href="https://us04web.zoom.us/j/79534717147?pwd=MnpJMW1hWWtXd29zOWdpdTdPZ0QyUT09"
                        class="cta-button" target="_blank" rel="noopener noreferrer">
-                        🙏 Join Prayer Meeting
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 14h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16"/><path d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"/><path d="m2 15 6 6"/><path d="M19.5 8.5c.7-.7 1.5-1.6 1.5-2.7A2.73 2.73 0 0 0 16 4a2.78 2.78 0 0 0-5 1.8c0 1.2.8 2 1.5 2.8L16 12Z"/></svg>
+                        Join Prayer Meeting
                     </a>
                 </div>
 
                 <div class="detail-card" style="background: rgba(0, 122, 255, 0.05); border-color: rgba(0, 122, 255, 0.2); margin: 32px 0;">
-                    <div class="detail-title" style="color: var(--accent);">📱 Stay Connected • Join Our GroupMe</div>
+                    <div class="detail-title" style="color: var(--accent);"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Stay Connected • Join Our GroupMe</div>
                     <div class="detail-content" style="margin-bottom: 20px;">
                         Get updates about prayer calls, schedule changes, and future events through our GroupMe community.
                         <br><br>
@@ -501,7 +704,7 @@
 
                 <div class="meeting-details">
                     <div class="detail-card">
-                        <div class="detail-title">💻 Computer & Mobile</div>
+                        <div class="detail-title"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16"/></svg>Computer & Mobile</div>
                         <div class="detail-content">
                             <strong>Zoom Link:</strong><br>
                             <a href="https://us04web.zoom.us/j/79534717147?pwd=MnpJMW1hWWtXd29zOWdpdTdPZ0QyUT09" 
@@ -516,7 +719,7 @@
                     </div>
 
                     <div class="detail-card">
-                        <div class="detail-title">📞 Phone Access</div>
+                        <div class="detail-title"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Phone Access</div>
                         <div class="detail-content">
                             <strong>Dial:</strong> <span class="meeting-id">1-669-900-6833</span><br>
                             <strong>Meeting ID:</strong> <span class="meeting-id">795 3471 7147</span><br>
@@ -532,7 +735,7 @@
                 </div>
 
                 <div class="testimonies-section">
-                    <div class="testimonies-title">✨ Testimonies Welcome</div>
+                    <div class="testimonies-title"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.287 1.288L3 12l5.8 1.9a2 2 0 0 1 1.288 1.287L12 21l1.9-5.8a2 2 0 0 1 1.287-1.288L21 12l-5.8-1.9a2 2 0 0 1-1.288-1.287Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>Testimonies Welcome</div>
                     <div class="testimonies-text">Brief time at the end for sharing</div>
                 </div>
             </div>
@@ -545,6 +748,43 @@
                     We are a global ministry dedicated to healing and restoring hearts while influencing and training leaders to foster an intimate and obedient relationship with the Creator. Through daily prayer meetings, we build a community of faith that spans the globe.
                 </p>
                 <div class="nonprofit-badge">501(c)(3) Nonprofit Ministry</div>
+            </div>
+        </section>
+
+        <section class="donate">
+            <div class="container">
+                <h2 class="donate-title">Support the Ministry</h2>
+                <p class="donate-text">
+                    Your generosity fuels daily prayer meetings, outreach, and the training of leaders around the world. All donations to The Real Prayer Movement Inc. are tax-deductible under our 501(c)(3) status.
+                </p>
+                <div class="donate-card">
+                    <div class="donate-brand">
+                        <span class="donate-brand-mark">Zelle</span>
+                        <span>The Real Prayer Movement Inc.</span>
+                    </div>
+                    <div class="donate-qr-wrap">
+                        <img src="Assets/zelle-qr.png" alt="Zelle QR code to donate to The Real Prayer Movement Inc." class="donate-qr" />
+                    </div>
+                    <p class="donate-instructions">
+                        Scan from another device, or use the options below on this phone.
+                    </p>
+                    <div class="donate-email-row">
+                        <span class="donate-email-label">Zelle email</span>
+                        <button type="button" class="donate-email-btn" id="copyZelleEmail"
+                            data-email="therealprayermovement@gmail.com">
+                            <span class="donate-email-value">therealprayermovement@gmail.com</span>
+                            <span class="donate-email-copy" id="copyZelleEmailLabel">Tap to copy</span>
+                        </button>
+                    </div>
+                    <a href="https://enroll.zellepay.com/qr-codes?data=eyJ0b2tlbiI6InRoZXJlYWxwcmF5ZXJtb3ZlbWVudEBnbWFpbC5jb20iLCJuYW1lIjoiVGhlIFJlYWwgUHJheWVyIE1vdmVtZW50IEluYy4iLCJhY3Rpb24iOiJwYXltZW50In0="
+                       class="donate-zelle-btn" rel="noopener noreferrer">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                        Open in Banking App
+                    </a>
+                    <p class="donate-fallback">
+                        If it doesn't open, tap the email to copy and paste it into your bank app's Zelle flow.
+                    </p>
+                </div>
             </div>
         </section>
     </main>
@@ -583,7 +823,7 @@
         // Enhanced button interactions
         document.addEventListener('DOMContentLoaded', () => {
             const ctaButton = document.querySelector('.cta-button');
-            
+
             if (ctaButton) {
                 ctaButton.addEventListener('click', () => {
                     // Subtle haptic-like feedback
@@ -591,8 +831,41 @@
                     setTimeout(() => {
                         ctaButton.style.transform = '';
                     }, 100);
-                    
+
                     console.log('Prayer meeting link clicked');
+                });
+            }
+
+            const copyBtn = document.getElementById('copyZelleEmail');
+            const copyLabel = document.getElementById('copyZelleEmailLabel');
+            if (copyBtn && copyLabel) {
+                copyBtn.addEventListener('click', async () => {
+                    const email = copyBtn.dataset.email;
+                    const originalLabel = 'Tap to copy';
+                    let copied = false;
+                    try {
+                        if (navigator.clipboard && navigator.clipboard.writeText) {
+                            await navigator.clipboard.writeText(email);
+                            copied = true;
+                        }
+                    } catch (_) { /* fall through to execCommand */ }
+                    if (!copied) {
+                        const ta = document.createElement('textarea');
+                        ta.value = email;
+                        ta.setAttribute('readonly', '');
+                        ta.style.position = 'absolute';
+                        ta.style.left = '-9999px';
+                        document.body.appendChild(ta);
+                        ta.select();
+                        try { copied = document.execCommand('copy'); } catch (_) {}
+                        document.body.removeChild(ta);
+                    }
+                    copyBtn.classList.add('copied');
+                    copyLabel.textContent = copied ? 'Copied!' : 'Copy failed';
+                    setTimeout(() => {
+                        copyBtn.classList.remove('copied');
+                        copyLabel.textContent = originalLabel;
+                    }, 1800);
                 });
             }
 
